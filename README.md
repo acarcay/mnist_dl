@@ -1,38 +1,42 @@
-MNIST Digit Classification Model with PyTorch
-This project is a Python script that demonstrates how to build, train, and test a simple Artificial Neural Network (ANN) using the popular MNIST handwritten digit dataset. The model is developed using the PyTorch library, and the training process is visualized with matplotlib.
+Of course, here is the English version of the README file for your MNIST project.
 
-📝 Description
-The goal of this project is to present all the steps of a basic deep learning project in a single file, making it ideal for beginners in machine learning. The script performs the following operations in sequence:
+MNIST Handwritten Digit Classification with PyTorch
+This project involves creating, training, and testing a simple Artificial Neural Network (ANN) to classify handwritten digits from the MNIST dataset using PyTorch.
 
-Downloads the MNIST dataset and creates DataLoaders.
+Project Features
+Data Handling: Automatically downloads and prepares the MNIST dataset for training using torchvision.
 
-Visualizes a few sample images from the dataset.
+Data Visualization: Includes a function to display random samples and their corresponding labels from the training data.
 
-Defines a simple fully-connected neural network model.
+Model Architecture: Uses a simple neural network composed of fully-connected layers.
 
-Trains the model using the CrossEntropyLoss loss function and the Adam optimizer.
+Training Loop: Trains the model and prints the average loss value for each epoch to the console.
 
-Plots the training loss over the epochs.
+Loss Curve: Plots a graph showing the change in loss value over epochs after training is complete.
 
-Measures the performance of the trained model on the test dataset and reports the accuracy.
+Evaluation: Calculates and displays the accuracy of the model on the test data.
 
-✨ Features
-Data Handling: Automatically downloads and normalizes the MNIST dataset using torchvision.
+Hardware Support: Automatically uses a CUDA-enabled GPU if available; otherwise, it runs on the CPU.
 
-Model Architecture: A simple fully-connected neural network with a 784-node input layer, two hidden layers (128 and 64 neurons), and a 10-node output layer (for digits 0-9).
+Model Architecture
+The neural network used is a simple feed-forward network consisting of the following layers:
 
-Training Loop: Updates the model's weights using a standard PyTorch training loop.
+Flatten Layer: Converts 28x28 pixel images into a one-dimensional vector with 784 elements.
 
-Visualization: Generates a plot for the training loss and displays sample images from the dataset.
+Fully Connected Layer 1: Maps 784 input features to 128 output features.
 
-Evaluation: Calculates the final accuracy percentage of the model on the test data.
+ReLU Activation Function
 
-GPU Support: Automatically utilizes a CUDA-enabled GPU for training if one is available on the system.
+Fully Connected Layer 2: Maps 128 input features to 64 output features.
 
-⚙️ Requirements
-To run this project, you need to have the following libraries installed:
+ReLU Activation Function
 
-Python (3.6+)
+Fully Connected Layer 3 (Output Layer): Maps 64 input features to 10 output features (one class for each digit from 0-9).
+
+The Adam optimization algorithm is used for model optimization, and Cross-Entropy Loss is used as the loss function.
+
+Requirements
+To run the project, you will need Python 3 and the following libraries:
 
 PyTorch
 
@@ -40,35 +44,21 @@ Torchvision
 
 Matplotlib
 
-nstallation
-Clone the repository to your local machine or simply download the ann.py file.
-
-It is recommended to create a virtual environment to manage project dependencies:
-
-Bash
-
-python -m venv venv
-source venv/bin/activate  # For macOS/Linux
-# venv\Scripts\activate   # For Windows
-Install the required libraries using pip:
+You can install these libraries using pip:
 
 Bash
 
 pip install torch torchvision matplotlib
-🏃‍♀️ Usage
-Once the installation is complete, you can run the project by executing the following command in your terminal:
+How to Run
+Save the code as a Python file, such as mnist_ann.py.
+
+Open your terminal or command prompt.
+
+Navigate to the directory where you saved the file.
+
+Run the script with the following command:
 
 Bash
 
-python ann.py
-When the script runs, it will:
-
-Download the MNIST dataset to a ./data directory (if not already downloaded).
-
-Open a window displaying 5 sample digits from the dataset.
-
-Begin the training process for 10 epochs, printing the loss for each epoch to the terminal.
-
-After training, open a second window showing a plot of the training loss.
-
-Finally, print the model's final accuracy on the test set to the terminal.
+python mnist_ann.py
+When the script runs, it will first download the dataset (if it hasn't been downloaded before), then display a few sample digits. Afterward, the model will be trained for 10 epochs, a training graph will be plotted, and finally, the accuracy on the test data will be printed to the screen.
