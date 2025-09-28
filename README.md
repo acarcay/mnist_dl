@@ -1,5 +1,3 @@
-Of course, here is the English version of the README file for your MNIST project.
-
 MNIST Handwritten Digit Classification with PyTorch
 This project involves creating, training, and testing a simple Artificial Neural Network (ANN) to classify handwritten digits from the MNIST dataset using PyTorch.
 
